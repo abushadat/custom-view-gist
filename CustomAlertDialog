@@ -1,0 +1,17 @@
+AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
+        builder.setTitle("Name");
+
+        final View customLayout = getLayoutInflater().inflate(R.layout.dialog_order_update, null);
+        builder.setView(customLayout);
+        TextView productTitle = customLayout.findViewById(R.id.product_tittle);
+        productTitle.setText(item.getProductTitle());
+
+        Button updateBtn =  customLayout.findViewById(R.id.btnUpdate);
+        builder.setPositiveButton("Update", (dialog, which) -> {
+
+           /* EditText editText = customLayout.findViewById(R.id.editText);
+            sendDialogDataToActivity(editText.getText().toString());*/
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
