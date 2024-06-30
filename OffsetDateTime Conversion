@@ -1,0 +1,16 @@
+---Kotlin---
+
+val timestamp = "2024-04-30T19:46:01.307+06:00"
+    val offsetDateTime = OffsetDateTime.parse(timestamp)
+    val formatter = DateTimeFormatter.ofPattern("dd, MM, yyyy")
+    val formattedDate= offsetDateTime.format(formatter)
+    println(formattedDate) 
+
+
+---Java---
+
+ String timestamp = "2024-04-30T19:46:01.307+06:00";
+        OffsetDateTime offsetDateTime = OffsetDateTime.parse(timestamp);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd, MM, yyyy");
+        String formattedDate = offsetDateTime.format(formatter);
+        System.out.println(formattedDate);
